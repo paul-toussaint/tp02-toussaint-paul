@@ -1,0 +1,54 @@
+<div>
+    <h2>Formulaire de saisie des informations client</h2>
+    <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" formControlName="nom">
+
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" formControlName="prenom">
+
+        <label for="adresse">Adresse</label>
+        <input type="text" id="adresse" formControlName="adresse">
+
+        <label for="cp">Code postal</label>
+        <input type="text" id="cp" formControlName="cp">
+
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" formControlName="ville">
+
+        <label for="tel">Téléphone</label>
+        <input type="text" id="tel" formControlName="tel">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email">
+
+        <label for="civilite">Civilité</label>
+        <input type="text" id="civilite" formControlName="civilite">
+
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" formControlName="password">
+
+        <label for="login">Login</label>
+        <input type="text" id="login" formControlName="login">
+
+        <label for="pays">Pays</label>
+        <input type="text" id="pays" formControlName="pays">
+
+        <button type="submit">Valider</button>
+    </form>
+
+    <div *ngIf="afficherRecapitulatif">
+        <h2>Récapitulatif des données saisies :</h2>
+        <p><strong>Nom :</strong> {{ clientForm.value.nom }}</p>
+        <p><strong>Prénom :</strong> {{ clientForm.value.prenom }}</p>
+        <p><strong>Adresse :</strong> {{ clientForm.value.adresse }}</p>
+        <p><strong>Code postal :</strong> {{ clientForm.value.cp }}</p>
+        <p><strong>Ville :</strong> {{ clientForm.value.ville }}</p>
+        <p><strong>Téléphone :</strong> {{ clientForm.value.tel }}</p>
+        <p><strong>Email :</strong> {{ clientForm.value.email }}</p>
+        <p><strong>Civilité :</strong> {{ clientForm.value.civilite }}</p>
+        <p><strong>Mot de passe :</strong> {{ clientForm.value.password }}</p>
+        <p><strong>Login :</strong> {{ clientForm.value.login }}</p>
+        <p><strong>Pays :</strong> {{ clientForm.value.pays }}</p>
+    </div>
+</div>
